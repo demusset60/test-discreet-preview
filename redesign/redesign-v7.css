@@ -1,0 +1,134 @@
+/* Test Discreet V7 — mobile-first brand-team polish */
+:root{--td7-plum:#705964;--td7-plum-dark:#55414b;--td7-mush:#9b8778;--td7-cream:#f8f4f0;--td7-pearl:#f4f1ef;--td7-line:rgba(31,32,34,.09)}
+
+/* Hero: product photography first, animated mobile commerce second. */
+.td-v7 .td6-hero{background:#fbf9f6}
+.td-v7 .td6-hero-stage{background-image:linear-gradient(90deg,rgba(248,244,240,.08),rgba(248,244,240,.16)),url('assets/test-discreet-hero-steps.webp')!important;background-size:cover!important;background-position:center!important}
+.td-v7 .td6-hero-stage::after,.td-v7 .td6-stage-glow{display:none!important}
+.td-v7 .td6-pack{display:none!important}
+.td-v7 .td6-phone{right:6.5%;top:10%;width:25%;height:72%;transform:translateY(calc(var(--scroll,0)*8px)) rotate(1.2deg);box-shadow:0 30px 70px -28px rgba(27,22,24,.42)}
+.td-v7 .td6-stage-note{right:2rem;top:1.6rem;background:rgba(255,255,255,.72);padding:.55rem .7rem;border-radius:12px;backdrop-filter:blur(8px)}
+.td-v7 .td6-hero-copy h1{max-width:9.7ch}
+.td-v7 .td6-hero-proof{border-top-color:rgba(31,32,34,.08)}
+
+/* Merchandising feels editorial, not like a template grid. */
+.td-v7 .td6-featured{background:linear-gradient(180deg,#fff 0,#fbfaf8 100%)}
+.td-v7 .td6-product-card{border-color:rgba(31,32,34,.085);box-shadow:0 18px 55px -46px rgba(40,31,35,.38)}
+.td-v7 .td6-product-media{background:linear-gradient(145deg,#f8f4f1,#eeebe7)}
+.td-v7 .td6-product-media img{object-fit:contain!important}
+.td-v7 .td6-badge{background:var(--td7-plum)}
+.td-v7 .td6-add{background:var(--td7-plum)}
+.td-v7 .td6-add:hover{background:var(--td7-plum-dark)}
+
+/* Decision cards get stronger photography and less empty card surface. */
+.td-v7 .td6-decision{background:#fff}
+.td-v7 .td6-decision-card{border-color:var(--td7-line);box-shadow:0 22px 60px -50px rgba(39,31,35,.35)}
+.td-v7 .td6-decision-main{background:linear-gradient(135deg,#eee6e9,#f7f2f4)}
+.td-v7 .td6-decision-core{background:linear-gradient(135deg,#eee7df,#f7f3ef)}
+.td-v7 .td6-decision-single{background:linear-gradient(135deg,#f5f4f2,#fbfaf9)}
+.td-v7 .td6-decision-card figure{background:rgba(255,255,255,.44);overflow:hidden}
+.td-v7 .td6-decision-card figure>img,.td-v7 .td6-mini-stack img{object-fit:contain!important}
+
+/* Real lifestyle step assets. */
+.td-v7 .td6-how{background:linear-gradient(180deg,#faf8f6 0,#f1efed 100%)}
+.td-v7 .td6-step-card{border-color:var(--td7-line);box-shadow:0 22px 56px -48px rgba(37,29,33,.36)}
+.td-v7 .td6-step-visual{background:#eee9e5}
+.td-v7 .td7-step-img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.002);transition:transform .45s ease}
+.td-v7 .td6-step-card:hover .td7-step-img{transform:scale(1.025)}
+
+/* The timer is a deliberate emotional beat, not a giant blocker. */
+.td-v7 .td6-time{background:linear-gradient(118deg,#58444f 0,#705964 55%,#806b76 100%)}
+.td-v7 .td6-time-copy h2{letter-spacing:-.05em}
+.td-v7 .td6-ring::after{background:#5d4853}
+
+/* Give horizontal rails a premium edge fade. */
+.td-v7 .td6-single-track,.td-v7 .td6-product-grid,.td-v7 .td6-decision-grid,.td-v7 .td6-step-track{scroll-behavior:smooth}
+
+@media(max-width:980px){
+  .td-v7 .td6-hero-copy{order:1}.td-v7 .td6-hero-stage{order:2}
+  .td-v7 .td6-phone{width:28%;right:5%;height:70%}
+}
+
+@media(max-width:640px){
+  :root{--td6-wrap:calc(100% - 1.25rem)}
+  .td-v7 .header{position:relative!important;top:auto!important}
+  .td-v7 .td6-categorybar{position:relative!important;top:auto!important;z-index:3!important;border-top:0}
+  .td-v7 .td6-categorybar .td6-wrap{min-height:3.25rem;gap:.15rem;padding:.18rem 0}
+  .td-v7 .td6-categorybar a{font-size:.69rem;padding:.52rem .78rem}
+
+  /* Mobile hero: text first, then a clean product photograph with a smaller moving phone. */
+  .td-v7 .td6-hero-grid{display:flex!important;flex-direction:column!important;min-height:0}
+  .td-v7 .td6-hero-copy{display:flex!important;padding:2.25rem 0 1.7rem!important}
+  .td-v7 .td6-hero-copy .td6-kicker{font-size:.58rem;margin-bottom:.72rem}
+  .td-v7 .td6-hero-copy h1{font-size:clamp(2.55rem,12vw,3.45rem)!important;line-height:.95!important;max-width:9.8ch!important}
+  .td-v7 .td6-hero-copy>p{font-size:.88rem!important;line-height:1.48!important;margin-top:1rem!important;max-width:27rem}
+  .td-v7 .td6-hero-actions{margin-top:1.25rem!important;gap:.55rem}
+  .td-v7 .td6-btn{min-height:2.75rem!important;font-size:.78rem!important;padding:0 1rem!important}
+  .td-v7 .td6-hero-proof{margin-top:1.05rem!important;padding-top:.9rem!important;gap:.45rem .85rem!important}
+  .td-v7 .td6-hero-proof span{font-size:.64rem!important}
+  .td-v7 .td6-hero-stage{min-height:23.5rem!important;margin-inline:-.625rem!important;background-position:center!important}
+  .td-v7 .td6-phone{display:block!important;width:31%!important;height:68%!important;right:5.5%!important;top:13%!important;border-width:4px!important;border-radius:1.55rem!important;transform:translateY(calc(var(--scroll,0)*5px)) rotate(1deg)!important}
+  .td-v7 .td6-phone-screen{border-radius:1.28rem!important}
+  .td-v7 .td6-phone-notch{height:9px!important;top:4px!important}
+  .td-v7 .td6-stage-note{display:none!important}
+
+  /* Headings cannot be clipped by nav/rails. */
+  .td-v7 .td6-featured,.td-v7 .td6-decision,.td-v7 .td6-how,.td-v7 .td6-singles,.td-v7 .td6-trust,.td-v7 .td6-faq{overflow:hidden}
+  .td-v7 .td6-section-head{display:flex!important;align-items:flex-end!important;gap:.75rem!important;margin-bottom:1.1rem!important}
+  .td-v7 .td6-section-head h2{font-size:2.15rem!important;line-height:.98!important;max-width:10.5ch!important;overflow-wrap:normal}
+  .td-v7 .td6-section-head>a{font-size:.72rem!important;line-height:1.25!important;margin-left:auto}
+
+  /* One full card + a deliberate next-card peek. */
+  .td-v7 .td6-product-grid{display:grid!important;grid-template-columns:none!important;grid-auto-flow:column!important;grid-auto-columns:86%!important;gap:.72rem!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory!important;padding-bottom:.5rem!important;scrollbar-width:none}
+  .td-v7 .td6-product-grid::-webkit-scrollbar{display:none}
+  .td-v7 .td6-product-grid .td6-product-card{scroll-snap-align:start!important}
+  .td-v7 .td6-product-media{height:17.2rem!important;padding:.8rem!important}
+  .td-v7 .td6-product-copy{min-height:0!important;padding:1rem!important}
+  .td-v7 .td6-product-title{font-size:1rem!important}
+  .td-v7 .td6-product-copy p{font-size:.73rem!important;min-height:0!important}
+  .td-v7 .td6-price-row{gap:.4rem!important}
+  .td-v7 .td6-price-row strong{font-size:1.22rem!important}
+  .td-v7 .td6-price-row em{margin-left:0!important}
+  .td-v7 .td6-add{min-height:2.8rem!important;font-size:.82rem!important}
+
+  /* 15-minute section becomes compact enough to feel premium. */
+  .td-v7 .td6-time{padding:2.9rem 0!important}
+  .td-v7 .td6-time-grid{gap:1.35rem!important}
+  .td-v7 .td6-time-copy h2{font-size:2.25rem!important;max-width:11ch!important}
+  .td-v7 .td6-time-copy p{font-size:.79rem!important;line-height:1.48!important;margin-top:.75rem!important}
+  .td-v7 .td6-timer{grid-template-columns:6.5rem minmax(0,1fr)!important;gap:.9rem!important}
+  .td-v7 .td6-ring{width:6.5rem!important}
+  .td-v7 .td6-ring span{font-size:2.45rem!important}
+  .td-v7 .td6-timeline{min-height:9.2rem!important}
+
+  /* Decision is image-led and swipeable. */
+  .td-v7 .td6-decision{padding:3.1rem 0!important}
+  .td-v7 .td6-decision-grid{display:grid!important;grid-template-columns:none!important;grid-auto-flow:column!important;grid-auto-columns:90%!important;gap:.7rem!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important;padding-bottom:.5rem!important;scrollbar-width:none}
+  .td-v7 .td6-decision-grid::-webkit-scrollbar{display:none}
+  .td-v7 .td6-decision-card{scroll-snap-align:start!important;grid-template-columns:1.05fr .9fr!important;min-height:12.5rem!important}
+  .td-v7 .td6-decision-card>div{padding:1.05rem .35rem 1rem 1.05rem!important}
+  .td-v7 .td6-decision-card figure{min-height:12.5rem!important}
+  .td-v7 .td6-decision-card h3{font-size:1.35rem!important}
+
+  /* Order / Test / Know uses the real images from the approved visual direction. */
+  .td-v7 .td6-how{padding:3.2rem 0!important}
+  .td-v7 .td6-step-track{display:grid!important;grid-auto-flow:column!important;grid-template-columns:none!important;grid-auto-columns:88%!important;gap:.72rem!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important;padding-bottom:.55rem!important;scrollbar-width:none}
+  .td-v7 .td6-step-track::-webkit-scrollbar{display:none}
+  .td-v7 .td6-step-card{display:block!important;scroll-snap-align:start!important}
+  .td-v7 .td6-step-visual{height:15rem!important}
+  .td-v7 .td6-step-copy{padding:.95rem 1rem 1.05rem!important}
+
+  /* Singles: stop the half-cut ugly two-column effect. */
+  .td-v7 .td6-single-track{grid-auto-columns:86%!important;gap:.72rem!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important;padding-bottom:.5rem!important}
+  .td-v7 .td6-single-track .td6-product-card{scroll-snap-align:start!important}
+
+  /* Keep trust tiles readable, but not huge grey lines. */
+  .td-v7 .td6-trust-cards{display:grid!important;grid-template-columns:1fr 1fr!important;gap:.55rem!important;border:0!important}
+  .td-v7 .td6-trust-cards>div{border:1px solid var(--td7-line)!important;border-radius:14px!important;min-height:8.5rem!important;background:#fff!important;padding:.9rem!important}
+  .td-v7 .td6-trust-cards b{font-size:.75rem!important}.td-v7 .td6-trust-cards p{font-size:.64rem!important;line-height:1.45!important}
+
+  /* Pop-up stays subtle. */
+  .td-v7 .td6-offer{width:calc(100vw - 1rem)!important;right:.5rem!important;bottom:.5rem!important;border-radius:17px!important;padding:1rem!important}
+}
+
+@media(prefers-reduced-motion:reduce){.td-v7 .td7-step-img{transform:none!important}.td-v7 .td6-phone{transform:none!important}}
