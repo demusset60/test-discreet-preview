@@ -1,0 +1,34 @@
+/* V6 small asset-safe fixes: keep the live preview polished even before final photography is supplied. */
+.td6-step-track .td6-step-card:nth-child(2) .td6-photo,
+.td6-step-track .td6-step-card:nth-child(3) .td6-photo{position:relative;isolation:isolate;background:linear-gradient(135deg,#e9ddd5 0%,#f7f2ee 56%,#ece3df 100%);overflow:hidden}
+.td6-step-track .td6-step-card:nth-child(2) .td6-photo img,
+.td6-step-track .td6-step-card:nth-child(3) .td6-photo img{display:none!important}
+.td6-step-track .td6-step-card:nth-child(2) .td6-photo::before{content:'';position:absolute;left:17%;right:16%;bottom:22%;height:3.2rem;border-radius:1rem;background:linear-gradient(#fff,#f6f5f3);border:1px solid rgba(55,48,50,.14);box-shadow:0 22px 35px -28px rgba(33,26,29,.52),inset 0 -8px 15px rgba(210,206,204,.24)}
+.td6-step-track .td6-step-card:nth-child(2) .td6-photo::after{content:'';position:absolute;width:1.15rem;height:9.3rem;right:26%;top:13%;border-radius:999px 999px .4rem .4rem;background:linear-gradient(90deg,#fff 0 32%,#d8cfd0 33% 44%,#fbfbfa 45% 100%);border:1px solid rgba(76,64,69,.15);box-shadow:-1.05rem 7.2rem 0 -.42rem #765b69,0 14px 26px -18px rgba(32,25,28,.6);transform:rotate(39deg);transform-origin:50% 75%}
+.td6-step-track .td6-step-card:nth-child(2) .td6-photo{background-image:radial-gradient(circle at 34% 24%,rgba(255,255,255,.85),rgba(255,255,255,0) 28%),linear-gradient(135deg,#eaded6,#f7f2ee 56%,#ece3df)}
+.td6-step-track .td6-step-card:nth-child(3) .td6-photo::before{content:'';position:absolute;width:64%;height:5.2rem;left:18%;top:38%;border-radius:1.25rem;background:linear-gradient(#fff,#f5f4f2);border:1px solid rgba(55,48,50,.15);box-shadow:0 25px 40px -28px rgba(35,28,31,.55);transform:rotate(-3deg)}
+.td6-step-track .td6-step-card:nth-child(3) .td6-photo::after{content:'';position:absolute;width:17%;height:1.55rem;left:35%;top:47%;border-radius:.48rem;background:linear-gradient(90deg,#efe5e9 0 35%,#6f5966 36% 43%,#efe5e9 44% 100%);box-shadow:6.9rem 0 0 0 #ece6e8;transform:rotate(-3deg)}
+.td6-step-track .td6-step-card:nth-child(3) .td6-photo{background-image:radial-gradient(circle at 76% 26%,rgba(255,255,255,.9),rgba(255,255,255,0) 26%),linear-gradient(135deg,#eee5e0,#faf7f4 58%,#ece5e1)}
+.td6-step-track .td6-step-card:nth-child(2) .td6-photo span,
+.td6-step-track .td6-step-card:nth-child(3) .td6-photo span{display:none}
+
+/* Make the merchandising more like a consistent studio shoot instead of isolated grey cards. */
+.td6-product-media{background:radial-gradient(circle at 58% 34%,rgba(255,255,255,.96),rgba(255,255,255,.18) 42%,transparent 43%),linear-gradient(145deg,#eee7e2,#f9f6f3)!important;position:relative}
+.td6-product-media::after{content:'';position:absolute;left:17%;right:17%;bottom:8%;height:8%;background:rgba(94,75,84,.10);filter:blur(18px);border-radius:50%;z-index:0}
+.td6-product-media img{position:relative;z-index:1}
+.td6-product-card:nth-child(even) .td6-product-media{background:radial-gradient(circle at 43% 32%,rgba(255,255,255,.96),rgba(255,255,255,.18) 42%,transparent 43%),linear-gradient(145deg,#eee9e6,#f8f5f3)!important}
+
+/* Reduce boxy feeling and make the decision cards feel like campaign compositions. */
+.td6-decision-card{border:0!important;box-shadow:inset 0 0 0 1px rgba(31,32,34,.07)!important}
+.td6-decision-main figure,.td6-decision-core figure,.td6-decision-single figure{background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.72),transparent 60%)}
+.td6-decision-card h3{font-size:1.8rem!important}
+.td6-decision-card p{font-size:.8rem!important}
+
+/* More elegant trust block: fewer visible grid lines. */
+.td6-trust-cards{gap:.85rem!important}
+.td6-trust-cards>div{border:0!important;box-shadow:inset 0 0 0 1px rgba(31,32,34,.07),0 18px 36px -34px rgba(32,26,29,.35)}
+
+@media(max-width:640px){
+  .td6-step-track .td6-step-card:nth-child(2) .td6-photo::after{right:24%;top:12%;height:8.3rem}
+  .td6-step-track .td6-step-card:nth-child(3) .td6-photo::after{box-shadow:5.6rem 0 0 0 #ece6e8}
+}
